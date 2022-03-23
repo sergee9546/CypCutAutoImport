@@ -85,15 +85,16 @@ def Start_Button_click(event):
         OpenButton.click()
         time.sleep(0.5)
 
-    # Выбор последнего добавленного элемента
-    # Нулевой индекс принадлежит пустому элементу, поэтому -1
+        # Выбор последнего добавленного элемента
+        # Нулевой индекс принадлежит пустому элементу, поэтому -1
+
         PartsList.select(PartsList.item_count() - 1)
         PartItem = PartsList.child_window(class_name='TRzCalcEdit')
         PartItem.set_text(Ws.cell(i + 1, 2).value)
         time.sleep(0.5)
 
 
-Initial_File_Button = ttk.Button(GUI, text='Exel файл')
+Initial_File_Button = ttk.Button(GUI, text='Excel файл')
 Initial_File_Button.grid(column=0, row=0, sticky=tk.W, padx=5, pady=5)
 
 Start_Button = ttk.Button(GUI, text='Импортировать')
